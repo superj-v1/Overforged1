@@ -1,8 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bkahkkytj1qa7"]
+[gd_scene load_steps=4 format=3 uid="uid://bkahkkytj1qa7"]
 
 [ext_resource type="Script" uid="uid://c7156gl4ofb18" path="res://player1.gd" id="1_o02vu"]
+[ext_resource type="Texture2D" uid="uid://d875lkp0n2kb" path="res://_MySprites/caixa_feliz.png" id="2_7w86a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o02vu"]
+size = Vector2(32, 32)
 
 [node name="Node2D" type="Node2D"]
 
@@ -10,6 +12,7 @@
 script = ExtResource("1_o02vu")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("2_7w86a")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_o02vu")

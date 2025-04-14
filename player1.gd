@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var velocidade = 500
+@export var velocidade = 250
 
 func detec_input():
 	#if Input.get_axis()
