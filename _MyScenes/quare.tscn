@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dik7kwotc5kul"]
+
+[ext_resource type="Script" uid="uid://dkm15fqjb0nfi" path="res://character_body_2d.gd" id="1_fcd83"]
+[ext_resource type="Texture2D" uid="uid://d875lkp0n2kb" path="res://_MySprites/caixa_feliz.png" id="2_w7r7l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwxc1"]
+size = Vector2(32, 32)
+
+[node name="Quare" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("1_fcd83")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_vwxc1")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("2_w7r7l")
