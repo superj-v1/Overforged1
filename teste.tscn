@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bkahkkytj1qa7"]
 
 [ext_resource type="Script" uid="uid://c7156gl4ofb18" path="res://player1.gd" id="1_o02vu"]
-[ext_resource type="Texture2D" uid="uid://d875lkp0n2kb" path="res://_MySprites/caixa_feliz.png" id="2_7w86a"]
+[ext_resource type="Texture2D" uid="uid://cm5x0n5dte80o" path="res://_MyArt/_MySprites/caixa_feliz_lol.tres" id="2_s2wow"]
 [ext_resource type="Texture2D" uid="uid://l6wdma4fa5n3" path="res://icon.svg" id="3_s2wow"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o02vu"]
@@ -24,7 +24,7 @@ script = ExtResource("1_o02vu")
 shape = SubResource("RectangleShape2D_o02vu")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-texture = ExtResource("2_7w86a")
+texture = ExtResource("2_s2wow")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(239, 28)
