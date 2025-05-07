@@ -1,9 +1,11 @@
-[gd_scene load_steps=72 format=3 uid="uid://craj4n0hrdpuq"]
+[gd_scene load_steps=76 format=3 uid="uid://craj4n0hrdpuq"]
 
 [ext_resource type="Texture2D" uid="uid://dbjgbiolf467t" path="res://_MyArt/WIP_IN_PROGRESS_back.png" id="1_175cl"]
 [ext_resource type="Texture2D" uid="uid://q0vmtrjtxhs1" path="res://FreeCC0Art/Flame02_16x4.tga" id="1_osd7q"]
 [ext_resource type="Texture2D" uid="uid://bfu1sgtiy7uyc" path="res://_MyArt/WIP_IN_PROGRESS_front.png" id="2_67dxr"]
 [ext_resource type="Texture2D" uid="uid://cuslgtwst4kxp" path="res://FreeCC0Art/anvil-2450920_1920.png" id="2_o43b0"]
+[ext_resource type="Texture2D" uid="uid://lfxq216jqtdq" path="res://_MyArt/Characters/Creatures/Monsters/Quarat_32x32-08.png" id="4_5yuxk"]
+[ext_resource type="Script" uid="uid://bo1d5ovtglu4x" path="res://_MyScripts/secret_reveal.gd" id="5_nh6u4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_175cl"]
 atlas = ExtResource("1_osd7q")
@@ -461,6 +463,21 @@ animations = [{
 "speed": 32.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_xkfx0"]
+atlas = ExtResource("4_5yuxk")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0d8wy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xkfx0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_0d8wy"]
 atlas = ExtResource("2_o43b0")
 region = Rect2(0, 0, 1920, 1180)
@@ -476,7 +493,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[node name="MenuScene" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1280.0
@@ -497,7 +514,19 @@ sprite_frames = SubResource("SpriteFrames_xkfx0")
 autoplay = "default"
 frame_progress = 0.269292
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
-position = Vector2(39.8, -11.25)
-scale = Vector2(0.025, 0.0625)
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(934, 482)
+sprite_frames = SubResource("SpriteFrames_0d8wy")
+script = ExtResource("5_nh6u4")
+
+[node name="Timer" type="Timer" parent="AnimatedSprite2D3"]
+process_callback = 0
+wait_time = 10.0
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(1035, 578)
+scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_3qsxd")
+
+[connection signal="timeout" from="AnimatedSprite2D3/Timer" to="AnimatedSprite2D3" method="_on_timer_timeout"]

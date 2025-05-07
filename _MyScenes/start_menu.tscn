@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://ciwesyg4lvt58"]
+[gd_scene load_steps=16 format=3 uid="uid://ciwesyg4lvt58"]
 
 [ext_resource type="PackedScene" uid="uid://craj4n0hrdpuq" path="res://_MyScenes/menu_scene_test1.tscn" id="1_wh2ms"]
 [ext_resource type="Script" uid="uid://c8n1kolbocfi1" path="res://_MyScripts/Main_Menu.gd" id="2_eutqo"]
 [ext_resource type="FontFile" uid="uid://d2fntl3rbhwhe" path="res://_MyFonts/Hoover-Variable.woff2" id="2_wg3m6"]
+[ext_resource type="PackedScene" uid="uid://bcbueek7u1ix2" path="res://_MyScenes/Settings Menu/settings_menu.tscn" id="4_eutqo"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eutqo"]
 
@@ -137,3 +138,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_nmhr7")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_ktdm1")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_fvxl4")
 text = "Quit"
+
+[node name="SettingsMenu" parent="Control" instance=ExtResource("4_eutqo")]
+visible = false
+layout_mode = 1
