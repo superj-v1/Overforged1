@@ -8,7 +8,7 @@ func detec_input():
 	#var direcao = Input.
 	velocity = direcao.normalized() * velocidade
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	detec_input()
 	move_and_slide()
 	
