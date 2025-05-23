@@ -3,6 +3,8 @@ extends CharacterBody2D
 
 @export var velocidade = 250
 
+var componentes_slot : ComponenteInventario = ComponenteInventario.new()
+
 func detec_input():
 	#if Input.get_axis()
 	var direcao = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")

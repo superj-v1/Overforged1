@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://bkahkkytj1qa7"]
+[gd_scene load_steps=9 format=3 uid="uid://bkahkkytj1qa7"]
 
 [ext_resource type="Script" uid="uid://c7156gl4ofb18" path="res://player1.gd" id="1_vo2b6"]
 [ext_resource type="Texture2D" uid="uid://cm5x0n5dte80o" path="res://_MyArt/_MySprites/caixa_feliz_lol.tres" id="2_epej7"]
+[ext_resource type="Resource" uid="uid://dpctl3gerjbb5" path="res://_MyScenes/itens/recursos/itens/barra_ferro.tres" id="3_iktej"]
 [ext_resource type="Texture2D" uid="uid://l6wdma4fa5n3" path="res://icon.svg" id="3_ji7bk"]
 [ext_resource type="PackedScene" uid="uid://bw4k21mvknt2b" path="res://_MyScenes/itens/coletaveis.tscn" id="4_epej7"]
+[ext_resource type="Resource" uid="uid://5gbu7uvnyo1h" path="res://_MyScenes/itens/recursos/itens/barra_mythril.tres" id="4_v401f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7w86a"]
 size = Vector2(212, 20)
@@ -30,6 +32,14 @@ y_sort_enabled = true
 
 [node name="itens" parent="entidades" instance=ExtResource("4_epej7")]
 position = Vector2(213, 117)
+
+[node name="itens2" parent="entidades" instance=ExtResource("4_epej7")]
+position = Vector2(362, 124)
+dados_coletaveis = ExtResource("3_iktej")
+
+[node name="itens3" parent="entidades" instance=ExtResource("4_epej7")]
+position = Vector2(475, 123)
+dados_coletaveis = ExtResource("4_v401f")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="entidades" groups=["players"]]
 position = Vector2(81.9999, 70)
