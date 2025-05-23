@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bw4k21mvknt2b"]
+
+[ext_resource type="Texture2D" uid="uid://dp1qqkf46w0hh" path="res://_MyArt/Happy_Ball_32x32-01.png" id="1_k77pm"]
+[ext_resource type="Script" uid="uid://b8nt2bc86iis1" path="res://_MyScenes/itens/coletaveis.gd" id="1_vggl5"]
+[ext_resource type="Resource" uid="uid://b3blft30tewb1" path="res://_MyScenes/itens/recursos/itens/barra_cobre.tres" id="2_16o50"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vggl5"]
+
+[node name="coletaveis" type="Node2D"]
+script = ExtResource("1_vggl5")
+dados_coletaveis = ExtResource("2_16o50")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_k77pm")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_vggl5")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

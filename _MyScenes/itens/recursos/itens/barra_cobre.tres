@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DadosItens" load_steps=3 format=3 uid="uid://b3blft30tewb1"]
+
+[ext_resource type="Script" uid="uid://m00pwdffrjuf" path="res://_MyScenes/itens/recursos/itens/DadosItens.gd" id="1_m0yqa"]
+[ext_resource type="Texture2D" uid="uid://l6wdma4fa5n3" path="res://icon.svg" id="2_gxrfp"]
+
+[resource]
+script = ExtResource("1_m0yqa")
+id_item = 0
+nome_item = "Barra de Cobre"
+textura_item = ExtResource("2_gxrfp")
+metadata/_custom_type_script = "uid://m00pwdffrjuf"

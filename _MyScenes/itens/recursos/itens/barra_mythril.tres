@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DadosItens" load_steps=3 format=3 uid="uid://5gbu7uvnyo1h"]
+
+[ext_resource type="Script" uid="uid://m00pwdffrjuf" path="res://_MyScenes/itens/recursos/itens/DadosItens.gd" id="1_y4lsj"]
+[ext_resource type="Texture2D" uid="uid://l6wdma4fa5n3" path="res://icon.svg" id="2_y4lsj"]
+
+[resource]
+script = ExtResource("1_y4lsj")
+id_item = 2
+nome_item = "Barra de Mythril"
+textura_item = ExtResource("2_y4lsj")
+metadata/_custom_type_script = "uid://m00pwdffrjuf"

@@ -1,3 +1,4 @@
+class_name Players
 extends CharacterBody2D
 
 @export var velocidade = 250

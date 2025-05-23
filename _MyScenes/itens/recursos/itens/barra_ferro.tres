@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DadosItens" load_steps=2 format=3 uid="uid://dpctl3gerjbb5"]
+
+[ext_resource type="Script" uid="uid://m00pwdffrjuf" path="res://_MyScenes/itens/recursos/itens/DadosItens.gd" id="1_4srpv"]
+
+[resource]
+script = ExtResource("1_4srpv")
+id_item = 0
+nome_item = "Barra de Cobre"
+metadata/_custom_type_script = "uid://m00pwdffrjuf"
