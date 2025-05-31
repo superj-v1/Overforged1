@@ -42,7 +42,7 @@ render_target_update_mode = 4
 
 [node name="Camera2D" type="Camera2D" parent="Background/SubViewportContainer/SubViewport"]
 
-[node name="Node2D" parent="." instance=ExtResource("1_wh2ms")]
+[node name="MenuScene" parent="." instance=ExtResource("1_wh2ms")]
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

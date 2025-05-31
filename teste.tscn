@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bkahkkytj1qa7"]
 
 [ext_resource type="Script" uid="uid://c7156gl4ofb18" path="res://player1.gd" id="1_o02vu"]
-[ext_resource type="Texture2D" uid="uid://cm5x0n5dte80o" path="res://_MyArt/_MySprites/caixa_feliz_lol.tres" id="2_s2wow"]
+[ext_resource type="Texture2D" uid="uid://lfxq216jqtdq" path="res://_MyArt/Characters/Creatures/Monsters/Quarat_32x32-08.png" id="2_s2wow"]
 [ext_resource type="Texture2D" uid="uid://l6wdma4fa5n3" path="res://icon.svg" id="3_s2wow"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o02vu"]
