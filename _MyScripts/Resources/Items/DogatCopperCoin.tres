@@ -1,0 +1,79 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=12 format=3 uid="uid://dqyel5bxvtv6i"]
+
+[ext_resource type="Texture2D" uid="uid://ovr4d2m4okh" path="res://_MyArt/My_Sprite_Sheets/Objects/Dogat_coin_copper_sheet-01.png" id="1_152v4"]
+[ext_resource type="AudioStream" uid="uid://dovf3y1hswgk4" path="res://_MySounds/Resources/Pickup/Kwang.coin_02.wav" id="2_c1ttl"]
+[ext_resource type="Script" uid="uid://diu0hvg4tp6vv" path="res://_MyScripts/Resources/Items/ItemData.gd" id="2_nto58"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nto58"]
+atlas = ExtResource("1_152v4")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1ttl"]
+atlas = ExtResource("1_152v4")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pubj4"]
+atlas = ExtResource("1_152v4")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qg02w"]
+atlas = ExtResource("1_152v4")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4urn4"]
+atlas = ExtResource("1_152v4")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a5f3m"]
+atlas = ExtResource("1_152v4")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ne7j"]
+atlas = ExtResource("1_152v4")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_06rt1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nto58")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c1ttl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pubj4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qg02w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4urn4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a5f3m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ne7j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[resource]
+script = ExtResource("2_nto58")
+item_name = "Dogat Copper Coin"
+material1_id = 1
+material2_id = 1
+material3_id = 1
+item_id = 997
+item_state = 9
+item_sharpness = 0
+item_base_temperature = 300
+item_melting_temperature = 800
+item_vaporization_temperature = 1900
+item_frames = SubResource("SpriteFrames_06rt1")
+item_stack_size = 10
+item_pickup_sound = ExtResource("2_c1ttl")
+metadata/_custom_type_script = "uid://diu0hvg4tp6vv"

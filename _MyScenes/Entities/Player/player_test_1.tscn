@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0jw3s3i3dusf"]
+
+[ext_resource type="Script" uid="uid://c7156gl4ofb18" path="res://_MyScripts/Entity/Player/player1.gd" id="1_wwakj"]
+[ext_resource type="Texture2D" uid="uid://lk3ip7jh1c0t" path="res://_MyArt/Characters/Creatures/Dweren/Humanoid_Base-08.png" id="2_wwakj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cmjui"]
+size = Vector2(23, 32)
+
+[node name="Player1" type="CharacterBody2D" groups=["Players"]]
+script = ExtResource("1_wwakj")
+max_slots_for_inventory = 3
+
+[node name="Alma" type="Node2D" parent="."]
+
+[node name="Corpo" type="Sprite2D" parent="."]
+texture = ExtResource("2_wwakj")
+
+[node name="Spirito" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_cmjui")
+
+[node name="Santo" type="AudioStreamPlayer2D" parent="."]

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bfu1sgtiy7uyc" path="res://_MyArt/WIP_IN_PROGRESS_front.png" id="2_67dxr"]
 [ext_resource type="Texture2D" uid="uid://cuslgtwst4kxp" path="res://FreeCC0Art/anvil-2450920_1920.png" id="2_o43b0"]
 [ext_resource type="Texture2D" uid="uid://lfxq216jqtdq" path="res://_MyArt/Characters/Creatures/Monsters/Quarat_32x32-08.png" id="4_5yuxk"]
-[ext_resource type="Script" uid="uid://bo1d5ovtglu4x" path="res://_MyScripts/secret_reveal.gd" id="5_nh6u4"]
+[ext_resource type="Script" uid="uid://bo1d5ovtglu4x" path="res://_MyScripts/Scenes Scripts/secret_reveal.gd" id="5_nh6u4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_175cl"]
 atlas = ExtResource("1_osd7q")

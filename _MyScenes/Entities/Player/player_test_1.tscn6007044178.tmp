@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0jw3s3i3dusf"]
+
+[ext_resource type="Script" uid="uid://c7156gl4ofb18" path="res://_MyScripts/Entity/Player/player1.gd" id="1_wwakj"]
+[ext_resource type="Texture2D" uid="uid://d875lkp0n2kb" path="res://_MyArt/caixa_feliz.png" id="2_ktopx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cmjui"]
+size = Vector2(32, 32)
+
+[node name="Player1" type="Node2D"]
+
+[node name="Corpo" type="CharacterBody2D" parent="." groups=["Players"]]
+position = Vector2(89.3, 128.33)
+script = ExtResource("1_wwakj")
+max_slots_for_inventory = 3
+
+[node name="Alma" type="Sprite2D" parent="Corpo"]
+texture = ExtResource("2_ktopx")
+
+[node name="Spirito" type="CollisionShape2D" parent="Corpo"]
+shape = SubResource("RectangleShape2D_cmjui")
+
+[node name="Santo" type="AudioStreamPlayer2D" parent="Corpo"]
