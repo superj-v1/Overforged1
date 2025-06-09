@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://bkahkkytj1qa7"]
+[gd_scene load_steps=17 format=4 uid="uid://bkahkkytj1qa7"]
 
 [ext_resource type="Texture2D" uid="uid://bf3t1kyweuiy" path="res://_MyArt/My_Sprite_Sheets/Tilesets/Workshops/Placeholder_Workshop_Dweren_1-7.png" id="1_ul6x0"]
 [ext_resource type="PackedScene" uid="uid://c0jw3s3i3dusf" path="res://_MyScenes/Entities/Player/player_test_1.tscn" id="3_grbdc"]
@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://wjfju7paegb4" path="res://_MyScripts/Resources/Items/DogatGoldCoin.tres" id="5_4iivt"]
 [ext_resource type="Resource" uid="uid://cvpeg2ukej54b" path="res://_MyScripts/Resources/Items/DogatSilverCoin.tres" id="6_grbdc"]
 [ext_resource type="Resource" uid="uid://dqyel5bxvtv6i" path="res://_MyScripts/Resources/Items/DogatCopperCoin.tres" id="7_ddwwg"]
+[ext_resource type="PackedScene" uid="uid://bi7ir86o0khcg" path="res://crafting/bigorna.tscn" id="8_f3wv5"]
 [ext_resource type="Script" uid="uid://b3eowovhlp6s5" path="res://ui_container.gd" id="8_ul6x0"]
 [ext_resource type="PackedScene" uid="uid://dxx36w81yjvqj" path="res://_MyScenes/UI/inventory_ui.tscn" id="9_f3wv5"]
 
@@ -236,6 +237,9 @@ collectable_data = ExtResource("6_grbdc")
 [node name="Collectable12" parent="Entity_Container" instance=ExtResource("4_3iyrq")]
 position = Vector2(376, 260)
 collectable_data = ExtResource("7_ddwwg")
+
+[node name="bigorna" parent="Entity_Container" instance=ExtResource("8_f3wv5")]
+position = Vector2(140, 91)
 
 [node name="UI_Container" type="CanvasLayer" parent="."]
 script = ExtResource("8_ul6x0")

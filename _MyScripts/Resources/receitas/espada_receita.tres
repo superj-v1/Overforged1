@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemRecipe" load_steps=6 format=3 uid="uid://bodqb14mqrufh"]
+
+[ext_resource type="Resource" uid="uid://bqwuu3lnej8x8" path="res://_MyScripts/Resources/Items/espada.tres" id="1_sot2y"]
+[ext_resource type="Script" uid="uid://diu0hvg4tp6vv" path="res://_MyScripts/Resources/Items/ItemData.gd" id="2_i1wy8"]
+[ext_resource type="Resource" uid="uid://b4hvphejbokw3" path="res://_MyScripts/Resources/Items/copper.tres" id="3_hkc0x"]
+[ext_resource type="Resource" uid="uid://pkf4x8by7vkw" path="res://_MyScripts/Resources/Items/silver.tres" id="4_r8ebt"]
+[ext_resource type="Script" uid="uid://smo1ai3d2yxg" path="res://_MyScripts/Resources/receitas/ItemRecipes.gd" id="5_10o0w"]
+
+[resource]
+script = ExtResource("5_10o0w")
+recipe_name = ""
+recipe_final_item = ExtResource("1_sot2y")
+recipe_material_array = Array[ExtResource("2_i1wy8")]([ExtResource("3_hkc0x"), ExtResource("4_r8ebt")])
+metadata/_custom_type_script = "uid://smo1ai3d2yxg"

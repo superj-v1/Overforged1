@@ -1,0 +1,73 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=13 format=3 uid="uid://b4hvphejbokw3"]
+
+[ext_resource type="Texture2D" uid="uid://chr08ccvay310" path="res://_MyArt/My_Sprite_Sheets/Objects/Dogat_coin_silver_sheet-01.png" id="1_1q7bw"]
+[ext_resource type="AudioStream" uid="uid://6pqfvc0x8his" path="res://_MySounds/Resources/Pickup/Kwang.coin_01.wav" id="2_ibc5o"]
+[ext_resource type="Script" uid="uid://diu0hvg4tp6vv" path="res://_MyScripts/Resources/Items/ItemData.gd" id="3_e2nmq"]
+[ext_resource type="Texture2D" uid="uid://dp1qqkf46w0hh" path="res://_MyArt/Happy_Ball_32x32-01.png" id="3_ibc5o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mx4u3"]
+atlas = ExtResource("1_1q7bw")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gadsy"]
+atlas = ExtResource("1_1q7bw")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_maaja"]
+atlas = ExtResource("1_1q7bw")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yr4su"]
+atlas = ExtResource("1_1q7bw")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ncwx"]
+atlas = ExtResource("1_1q7bw")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ieibo"]
+atlas = ExtResource("1_1q7bw")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74kh2"]
+atlas = ExtResource("1_1q7bw")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_06rt1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mx4u3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gadsy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_maaja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yr4su")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ncwx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ieibo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74kh2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[resource]
+script = ExtResource("3_e2nmq")
+item_name = "cobre"
+item_id = 0
+item_texture = ExtResource("3_ibc5o")
+item_frames = SubResource("SpriteFrames_06rt1")
+item_stack_size = 1
+item_pickup_sound = ExtResource("2_ibc5o")
+metadata/_custom_type_script = "uid://diu0hvg4tp6vv"
