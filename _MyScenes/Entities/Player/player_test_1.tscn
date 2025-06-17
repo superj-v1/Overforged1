@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://c0jw3s3i3dusf"]
+
+[ext_resource type="Script" uid="uid://c7156gl4ofb18" path="res://_MyScripts/Entity/Player/player1.gd" id="1_wwakj"]
+[ext_resource type="Texture2D" uid="uid://lk3ip7jh1c0t" path="res://_MyArt/Characters/Creatures/Dweren/Humanoid_Base-08.png" id="2_wwakj"]
+[ext_resource type="Script" uid="uid://8gggool61dl3" path="res://_MyScenes/Entities/Player/carry_item.gd" id="3_ktopx"]
+[ext_resource type="PackedScene" uid="uid://f5u65gbintn6" path="res://_MyScripts/Entity/Components/carried_item.tscn" id="4_cmjui"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cmjui"]
+size = Vector2(23, 32)
+
+[node name="Player1" type="CharacterBody2D" groups=["Players"]]
+script = ExtResource("1_wwakj")
+
+[node name="Alma" type="Node2D" parent="."]
+
+[node name="Corpo" type="Sprite2D" parent="."]
+z_index = 1
+texture = ExtResource("2_wwakj")
+
+[node name="Spirito" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_cmjui")
+
+[node name="Santo" type="AudioStreamPlayer2D" parent="."]
+
+[node name="CarryItem" type="Node2D" parent="."]
+script = ExtResource("3_ktopx")
+
+[node name="Carried_Item" parent="CarryItem" instance=ExtResource("4_cmjui")]
+
+[node name="Front" type="RayCast2D" parent="."]
+target_position = Vector2(0, 16)

@@ -1,9 +1,9 @@
 [gd_scene load_steps=16 format=3 uid="uid://bcbueek7u1ix2"]
 
 [ext_resource type="FontFile" uid="uid://d2fntl3rbhwhe" path="res://_MyFonts/Hoover-Variable.woff2" id="1_02q1r"]
-[ext_resource type="Script" uid="uid://bkvduusvr762i" path="res://_MyScripts/settings_menu.gd" id="1_xdtw6"]
+[ext_resource type="Script" uid="uid://bkvduusvr762i" path="res://_MyScripts/Scenes Scripts/settings_menu.gd" id="1_xdtw6"]
 [ext_resource type="FontFile" uid="uid://d0464ck3kgcaa" path="res://_MyFonts/RX100-Regular.woff2" id="2_di7ex"]
-[ext_resource type="PackedScene" uid="uid://oys3ivf1p0aj" path="res://_MyScenes/Settings Menu/settings_tab_container.tscn" id="3_fla3i"]
+[ext_resource type="PackedScene" uid="uid://oys3ivf1p0aj" path="res://_MyScenes/UI/Settings Menu/settings_tab_container.tscn" id="3_fla3i"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xdtw6"]
 

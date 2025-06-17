@@ -1,0 +1,9 @@
+extends CollisionShape2D
+@onready var interaction_range_shape: CollisionShape2D = $"."
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	if interaction_range_shape.shape.radius > 15:
+		apply_scale(interaction_range_shape.shape.radius / 15)
+

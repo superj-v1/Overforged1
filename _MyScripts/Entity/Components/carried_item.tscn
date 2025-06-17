@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://f5u65gbintn6"]
+
+[ext_resource type="Script" uid="uid://cbnty23ytt0h8" path="res://carried_item.gd" id="1_fbyde"]
+[ext_resource type="Texture2D" uid="uid://dp1qqkf46w0hh" path="res://_MyArt/Happy_Ball_32x32-01.png" id="2_8kuub"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nly8i"]
+atlas = ExtResource("2_8kuub")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_63gjr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nly8i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4qloe"]
+radius = 16.0
+
+[node name="Carried_Item" type="Node2D"]
+z_index = 1
+script = ExtResource("1_fbyde")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_8kuub")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_63gjr")
+autoplay = "default"
+frame_progress = 0.890246
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_4qloe")

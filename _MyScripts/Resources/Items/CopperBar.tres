@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://o5e2xlat6pf8"]
+
+[ext_resource type="Texture2D" uid="uid://bsfqify8iqrrs" path="res://_MyArt/My_Sprite_Sheets/Objects/Materials/Barra_de_cobre_wip_06.png" id="1_7gbdj"]
+[ext_resource type="Script" uid="uid://diu0hvg4tp6vv" path="res://_MyScripts/Resources/Items/ItemData.gd" id="2_mwg48"]
+
+[resource]
+script = ExtResource("2_mwg48")
+item_name = "CopperBar"
+material1_id = 0
+material2_id = 0
+material3_id = 0
+item_id = 0
+item_state = 0
+item_sharpness = 0
+item_base_temperature = 300
+item_melting_temperature = 800
+item_vaporization_temperature = 1900
+item_texture = ExtResource("1_7gbdj")
+item_stack_size = 1
+metadata/_custom_type_script = "uid://diu0hvg4tp6vv"

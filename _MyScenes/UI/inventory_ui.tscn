@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxx36w81yjvqj"]
+
+[ext_resource type="FontFile" uid="uid://d0464ck3kgcaa" path="res://_MyFonts/RX100-Regular.woff2" id="1_aooxn"]
+[ext_resource type="Script" uid="uid://cnyea6qbn3b5r" path="res://_MyScenes/UI/inventory_ui.gd" id="1_ougoe"]
+[ext_resource type="PackedScene" uid="uid://dd5xq7tgrolu4" path="res://_MyScenes/UI/inventory_slot.tscn" id="2_wq21r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wq21r"]
+bg_color = Color(0.29, 0.1218, 0.1218, 1)
+
+[node name="Inventory_UI" type="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 6
+theme_override_styles/panel = SubResource("StyleBoxFlat_wq21r")
+script = ExtResource("1_ougoe")
+inventory_slot = ExtResource("2_wq21r")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="TitleLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_aooxn")
+theme_override_font_sizes/font_size = 38
+text = "Inventory"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InventoryGrid" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 20
+columns = 8
+
+[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(82, 24)
+layout_mode = 2
+text = "Close"
+
+[connection signal="button_down" from="MarginContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_button_down"]
