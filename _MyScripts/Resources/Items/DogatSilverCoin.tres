@@ -1,35 +1,35 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=12 format=3 uid="uid://cvpeg2ukej54b"]
 
-[ext_resource type="Texture2D" uid="uid://chr08ccvay310" path="res://_MyArt/My_Sprite_Sheets/Objects/Dogat_coin_silver_sheet-01.png" id="1_qbyas"]
+[ext_resource type="Texture2D" uid="uid://chr08ccvay310" path="res://_MyArt/My_Sprite_Sheets/Objects/Coins/Dogat_coin_silver_sheet-01.png" id="1_mx4u3"]
 [ext_resource type="AudioStream" uid="uid://6pqfvc0x8his" path="res://_MySounds/Resources/Pickup/Kwang.coin_01.wav" id="2_gadsy"]
 [ext_resource type="Script" uid="uid://diu0hvg4tp6vv" path="res://_MyScripts/Resources/Items/ItemData.gd" id="2_mx4u3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mx4u3"]
-atlas = ExtResource("1_qbyas")
+atlas = ExtResource("1_mx4u3")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gadsy"]
-atlas = ExtResource("1_qbyas")
+atlas = ExtResource("1_mx4u3")
 region = Rect2(16, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_maaja"]
-atlas = ExtResource("1_qbyas")
+atlas = ExtResource("1_mx4u3")
 region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yr4su"]
-atlas = ExtResource("1_qbyas")
+atlas = ExtResource("1_mx4u3")
 region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7ncwx"]
-atlas = ExtResource("1_qbyas")
+atlas = ExtResource("1_mx4u3")
 region = Rect2(64, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ieibo"]
-atlas = ExtResource("1_qbyas")
+atlas = ExtResource("1_mx4u3")
 region = Rect2(80, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_74kh2"]
-atlas = ExtResource("1_qbyas")
+atlas = ExtResource("1_mx4u3")
 region = Rect2(96, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_06rt1"]
@@ -71,7 +71,7 @@ item_id = 998
 item_state = 9
 item_sharpness = 0
 item_base_temperature = 300
-item_melting_temperature = 750
+item_melting_temperature = 800
 item_vaporization_temperature = 1600
 item_frames = SubResource("SpriteFrames_06rt1")
 item_stack_size = 11

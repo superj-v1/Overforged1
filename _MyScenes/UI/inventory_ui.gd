@@ -20,7 +20,7 @@ func populate_inventory(inventory : InventoryComponent) -> void:
 		new_slot.set_item_data(item, inventory.get_inventory_contents()[item])
 	
 	if inventory.update_inventory_ui.is_connected(populate_inventory):
-		print("inventory connected")
+		#print("inventory connected")
 		return
 	else:
 		inventory.update_inventory_ui.connect(populate_inventory.bind(inventory))

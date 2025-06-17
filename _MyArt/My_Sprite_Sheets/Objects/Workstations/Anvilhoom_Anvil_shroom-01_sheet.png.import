@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duhh60tbkaefs"
-path="res://.godot/imported/Sword_generic_02.png-79a1e5f871f711ac2ef5f72225edffd2.ctex"
+uid="uid://bjbw6vgkiqc8a"
+path="res://.godot/imported/Anvilhoom_Anvil_shroom-01_sheet.png-0b0c48f8fb1f8e87e84281b27732531e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_MyArt/My_Sprite_Sheets/Objects/Sword_generic_02.png"
-dest_files=["res://.godot/imported/Sword_generic_02.png-79a1e5f871f711ac2ef5f72225edffd2.ctex"]
+source_file="res://_MyArt/My_Sprite_Sheets/Objects/Workstations/Anvilhoom_Anvil_shroom-01_sheet.png"
+dest_files=["res://.godot/imported/Anvilhoom_Anvil_shroom-01_sheet.png-0b0c48f8fb1f8e87e84281b27732531e.ctex"]
 
 [params]
 

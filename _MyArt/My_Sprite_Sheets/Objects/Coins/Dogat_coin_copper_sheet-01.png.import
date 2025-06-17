@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3m3o1fmy3ydg"
-path="res://.godot/imported/Sword_generic_01.png-0c77e0a97905d65a5cc1abb51da57e93.ctex"
+uid="uid://ovr4d2m4okh"
+path="res://.godot/imported/Dogat_coin_copper_sheet-01.png-4d4c92cd452fba92142d92bfc45993bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_MyArt/My_Sprite_Sheets/Objects/Sword_generic_01.png"
-dest_files=["res://.godot/imported/Sword_generic_01.png-0c77e0a97905d65a5cc1abb51da57e93.ctex"]
+source_file="res://_MyArt/My_Sprite_Sheets/Objects/Coins/Dogat_coin_copper_sheet-01.png"
+dest_files=["res://.godot/imported/Dogat_coin_copper_sheet-01.png-4d4c92cd452fba92142d92bfc45993bf.ctex"]
 
 [params]
 

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemRecipe" load_steps=5 format=3 uid="uid://ba2s2jye6pp62"]
+
+[ext_resource type="Resource" uid="uid://dqyel5bxvtv6i" path="res://_MyScripts/Resources/Items/DogatCopperCoin.tres" id="1_6ipt5"]
+[ext_resource type="Script" uid="uid://diu0hvg4tp6vv" path="res://_MyScripts/Resources/Items/ItemData.gd" id="1_p4lav"]
+[ext_resource type="Script" uid="uid://qw71m5y5ys2t" path="res://_MyScripts/Resources/Recipes/ItemRecipes.gd" id="2_6ipt5"]
+[ext_resource type="Resource" uid="uid://o5e2xlat6pf8" path="res://_MyScripts/Resources/Items/CopperBar.tres" id="3_mdy7f"]
+
+[resource]
+script = ExtResource("2_6ipt5")
+recipe_name = "Dogat Copper Coin"
+recipe_final_product_item = ExtResource("1_6ipt5")
+recipe_material_array = Array[ExtResource("1_p4lav")]([ExtResource("3_mdy7f")])
+amount_of_hammer_strikes = 1
+item_temperature_minimum = 300
+item_temperature_maximun = 1899
+metadata/_custom_type_script = "uid://qw71m5y5ys2t"

@@ -1,0 +1,89 @@
+[gd_scene load_steps=14 format=3 uid="uid://c7ldj66jfwgct"]
+
+[ext_resource type="Texture2D" uid="uid://bjbw6vgkiqc8a" path="res://_MyArt/My_Sprite_Sheets/Objects/Workstations/Anvilhoom_Anvil_shroom-01_sheet.png" id="1_8yhkr"]
+[ext_resource type="Script" uid="uid://bl8x5d46e5lhe" path="res://_MyScenes/Entities/Benches/crafting_bench.gd" id="1_fl3fa"]
+[ext_resource type="Script" uid="uid://bv1vtv72nngoc" path="res://_MyScenes/Entities/Benches/size_matcher_collision_shape.gd" id="2_7lilr"]
+[ext_resource type="Texture2D" uid="uid://bv5oqbmcmgs4x" path="res://_MyArt/My_Sprite_Sheets/UI/Interactables/Selection_ring_for_structures-01.png" id="3_bwdtf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fl3fa"]
+radius = 30.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hju6w"]
+atlas = ExtResource("3_bwdtf")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55kvg"]
+atlas = ExtResource("3_bwdtf")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rexyv"]
+atlas = ExtResource("3_bwdtf")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_laim4"]
+atlas = ExtResource("3_bwdtf")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8inyg"]
+atlas = ExtResource("3_bwdtf")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fmrqm"]
+atlas = ExtResource("3_bwdtf")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0f5eq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hju6w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55kvg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rexyv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_laim4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8inyg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fmrqm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fl3fa"]
+size = Vector2(25, 19)
+
+[node name="CraftingBench" type="Node2D"]
+
+[node name="CraftingBench" type="Area2D" parent="."]
+script = ExtResource("1_fl3fa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CraftingBench"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_fl3fa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CraftingBench/CollisionShape2D"]
+sprite_frames = SubResource("SpriteFrames_0f5eq")
+autoplay = "default"
+frame_progress = 0.44098
+script = ExtResource("2_7lilr")
+
+[node name="Sprite2D" type="Sprite2D" parent="CraftingBench"]
+texture = ExtResource("1_8yhkr")
+
+[node name="Fisicality" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fisicality"]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_fl3fa")
+
+[connection signal="body_entered" from="CraftingBench" to="CraftingBench" method="_on_body_entered"]
+[connection signal="body_exited" from="CraftingBench" to="CraftingBench" method="_on_body_exited"]

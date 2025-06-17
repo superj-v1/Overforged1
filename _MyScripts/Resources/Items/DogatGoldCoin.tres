@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=12 format=3 uid="uid://wjfju7paegb4"]
 
-[ext_resource type="Texture2D" uid="uid://ce4lylpeeagpu" path="res://_MyArt/My_Sprite_Sheets/Objects/Dogat_coin_sheet-01.png" id="1_hqlux"]
+[ext_resource type="Texture2D" uid="uid://ce4lylpeeagpu" path="res://_MyArt/My_Sprite_Sheets/Objects/Coins/Dogat_coin_sheet-01.png" id="1_hqlux"]
 [ext_resource type="Script" uid="uid://diu0hvg4tp6vv" path="res://_MyScripts/Resources/Items/ItemData.gd" id="2_efbmy"]
 [ext_resource type="AudioStream" uid="uid://6pqfvc0x8his" path="res://_MySounds/Resources/Pickup/Kwang.coin_01.wav" id="2_lo3ms"]
 

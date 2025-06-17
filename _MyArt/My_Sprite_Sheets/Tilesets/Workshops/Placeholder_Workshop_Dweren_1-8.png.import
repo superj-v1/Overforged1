@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ovr4d2m4okh"
-path="res://.godot/imported/Dogat_coin_copper_sheet-01.png-fe13a8d1efa27478bd9c0d4c1657d1fc.ctex"
+uid="uid://by8s5ienq0lgi"
+path="res://.godot/imported/Placeholder_Workshop_Dweren_1-8.png-c2650033f44ed7e091af20ffa755a930.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_MyArt/My_Sprite_Sheets/Objects/Dogat_coin_copper_sheet-01.png"
-dest_files=["res://.godot/imported/Dogat_coin_copper_sheet-01.png-fe13a8d1efa27478bd9c0d4c1657d1fc.ctex"]
+source_file="res://_MyArt/My_Sprite_Sheets/Tilesets/Workshops/Placeholder_Workshop_Dweren_1-8.png"
+dest_files=["res://.godot/imported/Placeholder_Workshop_Dweren_1-8.png-c2650033f44ed7e091af20ffa755a930.ctex"]
 
 [params]
 

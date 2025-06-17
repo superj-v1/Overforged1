@@ -1,6 +1,8 @@
 class_name ItemData
 extends Resource
-##Human, You're Not Reading My Trello >:(
+# Human, You're Not Reading My Trello >:(
+## AKA
+## The name of the item
 @export var item_name : String = "Pls send helpi X3"
 ## material_ids (I've put 100 id slots for materials, probably more than enough)
 ## MATERIALS HAVE THE SAME ID IN ALL ID SLOTS aka 

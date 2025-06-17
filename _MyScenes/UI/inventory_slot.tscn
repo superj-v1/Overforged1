@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dd5xq7tgrolu4"]
 
 [ext_resource type="Script" uid="uid://byt6y5n7vo18v" path="res://_MyScenes/UI/inventory_slot.gd" id="1_u2a35"]
-[ext_resource type="Texture2D" uid="uid://duhh60tbkaefs" path="res://_MyArt/My_Sprite_Sheets/Objects/Sword_generic_02.png" id="1_x1302"]
+[ext_resource type="Texture2D" uid="uid://duhh60tbkaefs" path="res://_MyArt/My_Sprite_Sheets/Objects/Weapons/Sword_generic_02.png" id="1_x1302"]
 
 [node name="InventorySlot" type="Panel"]
 custom_minimum_size = Vector2(84, 84)

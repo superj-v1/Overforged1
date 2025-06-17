@@ -4,11 +4,12 @@ extends CanvasLayer
 @onready var player_1: PlayerEntity = %Player1
 
 func _unhandled_input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("open_inventory"):
-		if inventory_ui.visible == false:
-			inventory_ui.show()
-			inventory_ui.populate_inventory(player_1.inventory_component)
-			return
-		else:
-			inventory_ui.hide()
-			return
+	pass
+	#if Input.is_action_just_pressed("open_inventory"):
+		#if inventory_ui.visible == false:
+			#inventory_ui.show()
+			#inventory_ui.populate_inventory(player_1.inventory_component)
+			#return
+		#else:
+			#inventory_ui.hide()
+			#return

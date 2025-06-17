@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://284fqaoegu41"]
+[gd_scene load_steps=6 format=3 uid="uid://f5u65gbintn6"]
 
-[ext_resource type="Script" uid="uid://xuch7eplahu4" path="res://_MyScripts/Resources/collectable.gd" id="1_nly8i"]
-[ext_resource type="Texture2D" uid="uid://dp1qqkf46w0hh" path="res://_MyArt/Happy_Ball_32x32-01.png" id="2_nly8i"]
+[ext_resource type="Script" uid="uid://cbnty23ytt0h8" path="res://carried_item.gd" id="1_fbyde"]
+[ext_resource type="Texture2D" uid="uid://dp1qqkf46w0hh" path="res://_MyArt/Happy_Ball_32x32-01.png" id="2_8kuub"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nly8i"]
-atlas = ExtResource("2_nly8i")
+atlas = ExtResource("2_8kuub")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_63gjr"]
@@ -21,11 +21,12 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_4qloe"]
 radius = 16.0
 
-[node name="Collectable" type="Node2D"]
-script = ExtResource("1_nly8i")
+[node name="Carried_Item" type="Node2D"]
+z_index = 1
+script = ExtResource("1_fbyde")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_nly8i")
+texture = ExtResource("2_8kuub")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_63gjr")
@@ -36,9 +37,3 @@ frame_progress = 0.890246
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_4qloe")
-
-[node name="Delay" type="Timer" parent="."]
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
-[connection signal="timeout" from="Delay" to="." method="_on_delay_timeout"]
