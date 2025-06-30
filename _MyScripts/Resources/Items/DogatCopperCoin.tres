@@ -64,9 +64,9 @@ animations = [{
 [resource]
 script = ExtResource("2_nto58")
 item_name = "Dogat Copper Coin"
-material1_id = 0
-material2_id = 0
-material3_id = 0
+material1_id = 12
+material2_id = 12
+material3_id = 12
 item_id = 997
 item_state = 9
 item_sharpness = 0

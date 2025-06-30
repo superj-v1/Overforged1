@@ -5,6 +5,9 @@ extends Node2D
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var delay: Timer = $Delay
+@export var floatoffset : float = 0
+@export var angle : float = 0
+@export var floatSpeed : float = 100
 
 var isPlayerInVicinity : bool = false
 
@@ -16,7 +19,7 @@ func _ready() -> void:
 	# If item has texture, then set the texture
 	if collectable_data.item_texture != null:
 		sprite_2d.texture = collectable_data.item_texture
-		sprite_2d.sprite_frames = SpriteFrames.new()
+		animated_sprite_2d.sprite_frames = SpriteFrames.new()
 	elif collectable_data.item_frames != null:
 		animated_sprite_2d.sprite_frames = collectable_data.item_frames
 		sprite_2d.texture = null
@@ -102,10 +105,18 @@ func _process(delta: float) -> void:
 				elif StackInvOrPick == 2:
 					print("ERROR! Max stack for item")
 			pass
+	if(angle > 360):
+		angle = 0
+	angle += deg_to_rad(floatSpeed * delta)
+	floatoffset = 2 * sin(angle)
+	#print("floatoffset = ", floatoffset)
+	if sprite_2d.texture != null:
+		sprite_2d.offset.y = floatoffset
+	elif animated_sprite_2d.sprite_frames != null:
+		animated_sprite_2d.offset.y = floatoffset
 
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Players") or body is PlayerEntity:
 		isPlayerInVicinity = false
 		movingObject = null
-		pass

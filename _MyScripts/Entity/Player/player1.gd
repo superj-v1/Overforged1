@@ -50,6 +50,10 @@ func detec_input():
 	# Aqui checa-se se o jogador quer andar lento, mais preciso
 	if Input.is_action_just_pressed("ui_slow"):
 		slowTime = not slowTime
+	if direcao.x > 0:
+		sprite_2d.flip_h = true;
+	else:
+		sprite_2d.flip_h = false;
 		
 	# Aqui checa-se se o jogador deve andar rápido, lento ou normal
 	if runTime and (not slowTime):

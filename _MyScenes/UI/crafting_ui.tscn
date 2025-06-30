@@ -1,0 +1,136 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqqa4wsfcita4"]
+
+[ext_resource type="Script" uid="uid://citeag2fy2sxb" path="res://_MyScenes/UI/crafting_ui.gd" id="1_mu540"]
+[ext_resource type="Texture2D" uid="uid://lfxq216jqtdq" path="res://_MyArt/Characters/Creatures/Monsters/Quarat_32x32-08.png" id="1_ole3t"]
+[ext_resource type="PackedScene" uid="uid://dd5xq7tgrolu4" path="res://_MyScenes/UI/inventory_slot.tscn" id="2_agxbl"]
+[ext_resource type="Script" uid="uid://but0ilxye73lx" path="res://_MyScenes/UI/nofunallowed1.gd" id="3_c5x4k"]
+
+[node name="MarginContainer" type="MarginContainer"]
+offset_right = 1280.0
+offset_bottom = 720.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="CraftingUI" type="PanelContainer" parent="."]
+layout_mode = 2
+script = ExtResource("1_mu540")
+
+[node name="MarginContainer" type="MarginContainer" parent="CraftingUI"]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CraftingUI/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="CraftTree" type="Tree" parent="CraftingUI/MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(364, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CraftingUI/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 32
+text = "Well... there is a cat here..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemCraftTextureUI" type="TextureRect" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(132, 132)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture = ExtResource("1_ole3t")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridyContainer" type="GridContainer" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+columns = 7
+
+[node name="InventorySlot" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridyContainer" instance=ExtResource("2_agxbl")]
+layout_mode = 2
+
+[node name="InventorySlot2" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridyContainer" instance=ExtResource("2_agxbl")]
+layout_mode = 2
+
+[node name="InventorySlot3" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridyContainer" instance=ExtResource("2_agxbl")]
+layout_mode = 2
+
+[node name="InventorySlot4" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridyContainer" instance=ExtResource("2_agxbl")]
+layout_mode = 2
+
+[node name="InventorySlot5" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridyContainer" instance=ExtResource("2_agxbl")]
+layout_mode = 2
+
+[node name="InventorySlot6" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridyContainer" instance=ExtResource("2_agxbl")]
+layout_mode = 2
+
+[node name="InventorySlot7" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridyContainer" instance=ExtResource("2_agxbl")]
+layout_mode = 2
+
+[node name="InventorySlot8" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridyContainer" instance=ExtResource("2_agxbl")]
+layout_mode = 2
+
+[node name="InventorySlot9" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridyContainer" instance=ExtResource("2_agxbl")]
+layout_mode = 2
+
+[node name="InventorySlot10" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridyContainer" instance=ExtResource("2_agxbl")]
+layout_mode = 2
+
+[node name="InventorySlot11" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridyContainer" instance=ExtResource("2_agxbl")]
+layout_mode = 2
+
+[node name="InventorySlot12" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridyContainer" instance=ExtResource("2_agxbl")]
+layout_mode = 2
+
+[node name="InventorySlot13" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridyContainer" instance=ExtResource("2_agxbl")]
+layout_mode = 2
+
+[node name="InventorySlot14" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridyContainer" instance=ExtResource("2_agxbl")]
+layout_mode = 2
+
+[node name="InventorySlot15" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridyContainer" instance=ExtResource("2_agxbl")]
+layout_mode = 2
+
+[node name="InventorySlot16" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridyContainer" instance=ExtResource("2_agxbl")]
+layout_mode = 2
+
+[node name="InventorySlot17" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridyContainer" instance=ExtResource("2_agxbl")]
+layout_mode = 2
+
+[node name="InventorySlot18" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridyContainer" instance=ExtResource("2_agxbl")]
+layout_mode = 2
+
+[node name="InventorySlot19" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridyContainer" instance=ExtResource("2_agxbl")]
+layout_mode = 2
+
+[node name="InventorySlot20" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridyContainer" instance=ExtResource("2_agxbl")]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(264, 64)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(1, 0.776471, 0.54902, 1)
+text = "Human I remunber... 
+You're give me Salmon :3"
+script = ExtResource("3_c5x4k")

@@ -1,6 +1,5 @@
 class_name ItemRecipe
 extends Resource
-
 ## The name of your recipe
 ## HUMAN! I REMEMBER YOURE RECIPES!
 @export var recipe_name : String = "Recipe For Noobs"

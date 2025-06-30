@@ -64,9 +64,9 @@ animations = [{
 [resource]
 script = ExtResource("2_mx4u3")
 item_name = "Dogat Silver Coin"
-material1_id = 8
-material2_id = 8
-material3_id = 8
+material1_id = 14
+material2_id = 14
+material3_id = 14
 item_id = 998
 item_state = 9
 item_sharpness = 0

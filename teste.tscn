@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://bkahkkytj1qa7"]
+[gd_scene load_steps=20 format=4 uid="uid://bkahkkytj1qa7"]
 
 [ext_resource type="Texture2D" uid="uid://bf3t1kyweuiy" path="res://_MyArt/My_Sprite_Sheets/Tilesets/Workshops/Placeholder_Workshop_Dweren_1-7.png" id="1_ul6x0"]
 [ext_resource type="Texture2D" uid="uid://by8s5ienq0lgi" path="res://_MyArt/My_Sprite_Sheets/Tilesets/Workshops/Placeholder_Workshop_Dweren_1-8.png" id="2_f3wv5"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dxx36w81yjvqj" path="res://_MyScenes/UI/inventory_ui.tscn" id="9_f3wv5"]
 [ext_resource type="PackedScene" uid="uid://c7ldj66jfwgct" path="res://_MyScenes/Entities/Benches/crafting_bench.tscn" id="9_o5rjx"]
 [ext_resource type="PackedScene" uid="uid://c2g6bca3gsr4b" path="res://_MyScripts/Resources/Items/spawner_of_copper_bar.tscn" id="10_suirj"]
+[ext_resource type="Resource" uid="uid://o5e2xlat6pf8" path="res://_MyScripts/Resources/Items/CopperBar.tres" id="11_ceje6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f3wv5"]
 texture = ExtResource("1_ul6x0")
@@ -271,6 +272,10 @@ position = Vector2(496, 112)
 
 [node name="Spawner of Copper Bar" parent="Entity_Container" instance=ExtResource("10_suirj")]
 position = Vector2(423, 391)
+
+[node name="Collectable13" parent="Entity_Container" instance=ExtResource("4_3iyrq")]
+position = Vector2(241, 420)
+collectable_data = ExtResource("11_ceje6")
 
 [node name="UI_Container" type="CanvasLayer" parent="."]
 script = ExtResource("8_ul6x0")
