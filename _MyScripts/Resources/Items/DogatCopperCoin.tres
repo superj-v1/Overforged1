@@ -64,6 +64,7 @@ animations = [{
 [resource]
 script = ExtResource("2_nto58")
 item_name = "Dogat Copper Coin"
+item_description = "A dogat coin of the copper variety. The most basic form of currency, dogat coins are blessed by dogat the god od Dogs and Cats, and because of this they're nearly indestructible. 30 copper dogat coins can feed a man for 3 days."
 material1_id = 12
 material2_id = 12
 material3_id = 12
@@ -74,6 +75,6 @@ item_base_temperature = 300
 item_melting_temperature = 800
 item_vaporization_temperature = 1900
 item_frames = SubResource("SpriteFrames_06rt1")
-item_stack_size = 10
+item_stack_size = 1
 item_pickup_sound = ExtResource("2_c1ttl")
 metadata/_custom_type_script = "uid://diu0hvg4tp6vv"

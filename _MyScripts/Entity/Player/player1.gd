@@ -17,6 +17,7 @@ var runTime = false
 var slowTime = false
 @export var distanciaDoObjeto = 16
 
+
 var inventory_component : InventoryComponent = InventoryComponent.new()
 
 ## Used to determine how many inventory slots
@@ -54,6 +55,10 @@ func detec_input():
 		sprite_2d.flip_h = true;
 	else:
 		sprite_2d.flip_h = false;
+	
+	if Input.is_action_just_pressed("item_drop"):
+		if inventory_component.get_inventory_contents().is_empty() != true:
+			inventory_component.remove_item(inventory_component.get_inventory_contents().keys().front(), 1, true)
 		
 	# Aqui checa-se se o jogador deve andar rápido, lento ou normal
 	if runTime and (not slowTime):

@@ -14,6 +14,10 @@ extends Resource
 ## A MATERIAL WITH MULTIPLE DIFFERENT MATERIAL IDS MAY NOT BE USED FOR CRAFTING
 ## Due to crafting slots only having 1 slot for now;
 ## In the future, you wil be able to uncraft stuff... MAYBE X3
+
+## AKA
+## The lore of the item
+@export var item_description : String = "We rock and craft..."
 @export_range(0, 99) var material1_id : int = 000
 ## material_ids (I've put 100 id slots for materials, probably more than enough)
 ## MATERIALS HAVE THE SAME ID IN ALL ID SLOTS aka 

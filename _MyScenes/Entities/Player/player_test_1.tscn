@@ -1,12 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://c0jw3s3i3dusf"]
+[gd_scene load_steps=9 format=3 uid="uid://c0jw3s3i3dusf"]
 
 [ext_resource type="Script" uid="uid://c7156gl4ofb18" path="res://_MyScripts/Entity/Player/player1.gd" id="1_wwakj"]
 [ext_resource type="Texture2D" uid="uid://lk3ip7jh1c0t" path="res://_MyArt/Characters/Creatures/Dweren/Humanoid_Base-08.png" id="2_wwakj"]
 [ext_resource type="Script" uid="uid://8gggool61dl3" path="res://_MyScenes/Entities/Player/carry_item.gd" id="3_ktopx"]
 [ext_resource type="PackedScene" uid="uid://f5u65gbintn6" path="res://_MyScripts/Entity/Components/carried_item.tscn" id="4_cmjui"]
+[ext_resource type="Script" uid="uid://br5rhg5payl2g" path="res://_MyScripts/Entity/Components/inventory.gd" id="5_oc4fl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cmjui"]
+size = Vector2(23, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oc4fl"]
 size = Vector2(23, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oc4fl"]
+radius = 33.5596
 
 [node name="Player1" type="CharacterBody2D" groups=["Players"]]
 script = ExtResource("1_wwakj")
@@ -14,12 +21,22 @@ script = ExtResource("1_wwakj")
 [node name="Alma" type="Node2D" parent="."]
 
 [node name="Corpo" type="Sprite2D" parent="."]
-z_index = 1
 texture = ExtResource("2_wwakj")
 
-[node name="Spirito" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0)
+[node name="Carne" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 10.5)
 shape = SubResource("RectangleShape2D_cmjui")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Spirito" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_oc4fl")
+
+[node name="Drop Item Range" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, 0)
+shape = SubResource("CircleShape2D_oc4fl")
+disabled = true
 
 [node name="Santo" type="AudioStreamPlayer2D" parent="."]
 
@@ -30,3 +47,6 @@ script = ExtResource("3_ktopx")
 
 [node name="Front" type="RayCast2D" parent="."]
 target_position = Vector2(0, 16)
+
+[node name="Inventory" type="Node2D" parent="."]
+script = ExtResource("5_oc4fl")

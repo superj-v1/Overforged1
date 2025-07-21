@@ -6,6 +6,7 @@
 [resource]
 script = ExtResource("2_mwg48")
 item_name = "CopperBar"
+item_description = "A bar of copper. A simple material, for simple man. A good craftsman always like when things are simply... even when things are simply not what they seen sometimes."
 material1_id = 12
 material2_id = 12
 material3_id = 12

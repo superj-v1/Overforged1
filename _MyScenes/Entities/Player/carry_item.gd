@@ -20,6 +20,8 @@ func _process(delta: float) -> void:
 	if front.target_position.y < 0:
 		#player_1_corpo.z_index = old_player_z_index + 2
 		carried_item.z_index = player_1_corpo.z_index - 1
+	elif front.target_position.y > 0:
+		carried_item.z_index = player_1_corpo.z_index + 1
 	else:
 		carried_item.z_index = old_z_index
 		#player_1_corpo.z_index = old_player_z_index

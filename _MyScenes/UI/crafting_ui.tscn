@@ -1,11 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://bqqa4wsfcita4"]
+[gd_scene load_steps=9 format=3 uid="uid://bqqa4wsfcita4"]
 
 [ext_resource type="Script" uid="uid://citeag2fy2sxb" path="res://_MyScenes/UI/crafting_ui.gd" id="1_mu540"]
 [ext_resource type="Texture2D" uid="uid://lfxq216jqtdq" path="res://_MyArt/Characters/Creatures/Monsters/Quarat_32x32-08.png" id="1_ole3t"]
 [ext_resource type="PackedScene" uid="uid://dd5xq7tgrolu4" path="res://_MyScenes/UI/inventory_slot.tscn" id="2_agxbl"]
 [ext_resource type="Script" uid="uid://but0ilxye73lx" path="res://_MyScenes/UI/nofunallowed1.gd" id="3_c5x4k"]
+[ext_resource type="Script" uid="uid://qw71m5y5ys2t" path="res://_MyScripts/Resources/Recipes/ItemRecipes.gd" id="3_rhmfq"]
+[ext_resource type="Resource" uid="uid://ba2s2jye6pp62" path="res://_MyScripts/Resources/Recipes/DogatCopperCoinRecipe.tres" id="4_bakyt"]
+[ext_resource type="Resource" uid="uid://cuqstmpgo5i7r" path="res://_MyScripts/Resources/Recipes/DogatGoldCoinRecipe.tres" id="5_inwnf"]
+[ext_resource type="Resource" uid="uid://dtlj18r228uic" path="res://_MyScripts/Resources/Recipes/DogatSilverCoinRecipe.tres" id="6_ouh6k"]
 
-[node name="MarginContainer" type="MarginContainer"]
+[node name="Crafting_UI" type="MarginContainer"]
 offset_right = 1280.0
 offset_bottom = 720.0
 theme_override_constants/margin_left = 20
@@ -16,6 +20,8 @@ theme_override_constants/margin_bottom = 20
 [node name="CraftingUI" type="PanelContainer" parent="."]
 layout_mode = 2
 script = ExtResource("1_mu540")
+inventory_slot = ExtResource("2_agxbl")
+recipes_array = Array[ExtResource("3_rhmfq")]([ExtResource("4_bakyt"), ExtResource("6_ouh6k"), ExtResource("5_inwnf")])
 
 [node name="MarginContainer" type="MarginContainer" parent="CraftingUI"]
 layout_mode = 2
@@ -32,6 +38,7 @@ alignment = 1
 unique_name_in_owner = true
 custom_minimum_size = Vector2(364, 0)
 layout_mode = 2
+hide_root = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CraftingUI/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -53,8 +60,22 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(132, 132)
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 6
+size_flags_vertical = 2
 texture = ExtResource("1_ole3t")
+
+[node name="ItemDescriptionLabel" type="Label" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "Felix Igneun Aegium, mostly known as Quarat.
+It is a type of monster that has been domesticated by the ancient people of Egian, the Land of Miracles.
+Like most felines it tends to go hunt for random critters to bring to it's master. But unlike it's fellow siblilings, it brings ores and small metal monsters as it's prey. 
+For this reason, it's often sought after by blacksmiths due to the rare minerals it leaves behind, as it only eats minerals of Vish scale 5 or less, leaving the byproducts as an excellently pure extract.
+Aside from it's mineral talents, it tends to sleep while standing, from which it received the nickname of \"Living Sphinx\"."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -127,10 +148,22 @@ layout_mode = 2
 [node name="InventorySlot20" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer/ScrollContainer/GridyContainer" instance=ExtResource("2_agxbl")]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="CraftButton" type="Button" parent="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(264, 64)
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(1, 0.776471, 0.54902, 1)
 text = "Human I remunber... 
 You're give me Salmon :3"
 script = ExtResource("3_c5x4k")
+
+[node name="ExitButton" type="Button" parent="CraftingUI/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(42, 24)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 24
+text = "X"
+
+[connection signal="cell_selected" from="CraftingUI/MarginContainer/HBoxContainer/CraftTree" to="CraftingUI" method="_on_craft_tree_cell_selected"]
+[connection signal="button_down" from="CraftingUI/MarginContainer/HBoxContainer/VBoxContainer/CraftButton" to="CraftingUI" method="_on_craft_button_button_down"]
+[connection signal="button_down" from="CraftingUI/MarginContainer/HBoxContainer/ExitButton" to="CraftingUI" method="_on_exit_button_button_down"]

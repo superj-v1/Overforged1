@@ -96,7 +96,7 @@ func _process(delta: float) -> void:
 			print(movingObject.name + " found : " + collectable_data.item_name)
 			StackInvOrPick = movingObject.inventory_component.check_inventory_contents(collectable_data)
 			if StackInvOrPick == 1:
-				movingObject.inventory_component.add_item(collectable_data)
+				movingObject.inventory_component.add_item(collectable_data, 0)
 				item_sound_pickup.emit()
 				queue_free()
 			else:

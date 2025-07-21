@@ -315,5 +315,3 @@ visible = false
 
 [node name="Game_Manager" type="Node" parent="."]
 script = ExtResource("15_wur0a")
-
-[editable path="Entity_Container/Player1"]

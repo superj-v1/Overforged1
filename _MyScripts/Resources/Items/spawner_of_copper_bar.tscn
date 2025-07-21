@@ -9,9 +9,6 @@ radius = 19.0263
 
 [node name="Spawner of Copper Bar" type="Node2D"]
 
-[node name="The bar itself" type="Node2D" parent="."]
-script = ExtResource("1_ge806")
-
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
@@ -20,3 +17,9 @@ shape = SubResource("CircleShape2D_ge806")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_5lhe5")
 script = ExtResource("3_mbvv4")
+
+[node name="The bar itself" type="Node2D" parent="."]
+script = ExtResource("1_ge806")
+
+[connection signal="body_entered" from="Area2D" to="The bar itself" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="The bar itself" method="_on_area_2d_body_exited"]
