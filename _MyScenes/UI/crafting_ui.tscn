@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bqqa4wsfcita4"]
+[gd_scene load_steps=10 format=3 uid="uid://bqqa4wsfcita4"]
 
 [ext_resource type="Script" uid="uid://citeag2fy2sxb" path="res://_MyScenes/UI/crafting_ui.gd" id="1_mu540"]
 [ext_resource type="Texture2D" uid="uid://lfxq216jqtdq" path="res://_MyArt/Characters/Creatures/Monsters/Quarat_32x32-08.png" id="1_ole3t"]
@@ -8,6 +8,7 @@
 [ext_resource type="Resource" uid="uid://ba2s2jye6pp62" path="res://_MyScripts/Resources/Recipes/DogatCopperCoinRecipe.tres" id="4_bakyt"]
 [ext_resource type="Resource" uid="uid://cuqstmpgo5i7r" path="res://_MyScripts/Resources/Recipes/DogatGoldCoinRecipe.tres" id="5_inwnf"]
 [ext_resource type="Resource" uid="uid://dtlj18r228uic" path="res://_MyScripts/Resources/Recipes/DogatSilverCoinRecipe.tres" id="6_ouh6k"]
+[ext_resource type="Resource" uid="uid://bhjxps6qsa28k" path="res://_MyScripts/Resources/Recipes/CopperSwordRecipe.tres" id="7_bakyt"]
 
 [node name="Crafting_UI" type="MarginContainer"]
 offset_right = 1280.0
@@ -21,7 +22,7 @@ theme_override_constants/margin_bottom = 20
 layout_mode = 2
 script = ExtResource("1_mu540")
 inventory_slot = ExtResource("2_agxbl")
-recipes_array = Array[ExtResource("3_rhmfq")]([ExtResource("4_bakyt"), ExtResource("6_ouh6k"), ExtResource("5_inwnf")])
+recipes_array = Array[ExtResource("3_rhmfq")]([ExtResource("4_bakyt"), ExtResource("6_ouh6k"), ExtResource("5_inwnf"), ExtResource("7_bakyt")])
 
 [node name="MarginContainer" type="MarginContainer" parent="CraftingUI"]
 layout_mode = 2

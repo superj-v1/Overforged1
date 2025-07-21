@@ -15,6 +15,12 @@ var movingObject : Node2D
 
 signal item_sound_pickup
 
+var rng = RandomNumberGenerator.new()
+
+var my_random_number : int = 0;
+
+var my_random_int : int = 0;
+
 func _ready() -> void:
 	# If item has texture, then set the texture
 	if collectable_data.item_texture != null:
@@ -88,9 +94,16 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	#else:
 		#print("NO CONTACT...")
 	#pass # Replace with function body.
+	
+func _on_delay_timeout() -> void:
+	pass # Replace with function body.
+	
 
 func _process(delta: float) -> void:
 	var StackInvOrPick : int = 0
+	my_random_number = rng.randi_range(-1000, 1000)
+	rng.set_seed(my_random_number)
+	my_random_int = rng.randi_range(5, 50)
 	if movingObject != null:
 		if Input.is_action_just_pressed("ui_accept"):
 			print(movingObject.name + " found : " + collectable_data.item_name)
@@ -105,9 +118,9 @@ func _process(delta: float) -> void:
 				elif StackInvOrPick == 2:
 					print("ERROR! Max stack for item")
 			pass
-	if(angle > 360):
-		angle = 0
-	angle += deg_to_rad(floatSpeed * delta)
+	if(angle > 360 + my_random_int * floatSpeed):
+		angle = 0 + my_random_int * floatSpeed
+	angle += deg_to_rad(floatSpeed * delta + (my_random_int * delta))
 	floatoffset = 2 * sin(angle)
 	#print("floatoffset = ", floatoffset)
 	if sprite_2d.texture != null:

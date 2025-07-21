@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2g6bca3gsr4b"]
+[gd_scene load_steps=6 format=3 uid="uid://c2g6bca3gsr4b"]
 
 [ext_resource type="Script" uid="uid://dvmwo2qb8wmo1" path="res://the_bar_itself.gd" id="1_ge806"]
 [ext_resource type="Texture2D" uid="uid://dp1qqkf46w0hh" path="res://_MyArt/Happy_Ball_32x32-01.png" id="2_5lhe5"]
@@ -6,6 +6,8 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ge806"]
 radius = 19.0263
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5lhe5"]
 
 [node name="Spawner of Copper Bar" type="Node2D"]
 
@@ -15,6 +17,7 @@ radius = 19.0263
 shape = SubResource("CircleShape2D_ge806")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_5lhe5")
 texture = ExtResource("2_5lhe5")
 script = ExtResource("3_mbvv4")
 
