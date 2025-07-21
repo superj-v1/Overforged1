@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7oqnlkbvv0ya"]
+
+[ext_resource type="Texture2D" uid="uid://bjb7cxnd8r5vc" path="res://_MyArt/My_Sprite_Sheets/Tilesets/Workshops/Placeholder_Workshop_Dweren_1-10.png" id="1_cyw8c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cyw8c"]
+radius = 40.7922
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqa74"]
+size = Vector2(28, 26)
+
+[node name="Furnace" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_cyw8c")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("1_cyw8c")
+region_enabled = true
+region_rect = Rect2(962, 195, 28, 26)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_dqa74")

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dnp77npub2rg0"]
+
+[ext_resource type="Texture2D" uid="uid://bnkphkm0iiw7v" path="res://_MyArt/My_Sprite_Sheets/Objects/Weapons/Copper_sword_generic_02_no_outline.png" id="1_8llln"]
+[ext_resource type="Script" uid="uid://diu0hvg4tp6vv" path="res://_MyScripts/Resources/Items/ItemData.gd" id="2_5ye25"]
+
+[resource]
+script = ExtResource("2_5ye25")
+item_name = "Copper Sword"
+item_description = "We rock and craft..."
+material1_id = 12
+material2_id = 12
+material3_id = 12
+item_id = 112
+item_state = 3
+item_sharpness = 5
+item_base_temperature = 300
+item_melting_temperature = 800
+item_vaporization_temperature = 1900
+item_texture = ExtResource("1_8llln")
+item_stack_size = 1
+metadata/_custom_type_script = "uid://diu0hvg4tp6vv"

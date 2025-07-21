@@ -64,6 +64,7 @@ animations = [{
 [resource]
 script = ExtResource("2_efbmy")
 item_name = "Dogat Gold Coin"
+item_description = "A dogat coin of the golden variety. Only the wealthiest of adventurers ever see this type of coin. 30 gold dogat coins can feed a man for 300.000 days."
 material1_id = 9
 material2_id = 9
 material3_id = 9
@@ -74,6 +75,6 @@ item_base_temperature = 300
 item_melting_temperature = 700
 item_vaporization_temperature = 1500
 item_frames = SubResource("SpriteFrames_06rt1")
-item_stack_size = 12
+item_stack_size = 1
 item_pickup_sound = ExtResource("2_lo3ms")
 metadata/_custom_type_script = "uid://diu0hvg4tp6vv"

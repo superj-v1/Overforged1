@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://blc0b1ijttnmc"]
+
+[ext_resource type="Texture2D" uid="uid://x651uxxo4ihg" path="res://_MyArt/My_Sprite_Sheets/Objects/Materials/Barra_de_prata_wip_07-03.png" id="1_6gwe8"]
+[ext_resource type="Script" uid="uid://diu0hvg4tp6vv" path="res://_MyScripts/Resources/Items/ItemData.gd" id="1_hkfg5"]
+
+[resource]
+script = ExtResource("1_hkfg5")
+item_name = "Pls send helpi X3"
+material1_id = 14
+material2_id = 14
+material3_id = 14
+item_id = 14
+item_state = 5
+item_sharpness = 0
+item_base_temperature = 300
+item_melting_temperature = 800
+item_vaporization_temperature = 1600
+item_texture = ExtResource("1_6gwe8")
+item_stack_size = 1
+metadata/_custom_type_script = "uid://diu0hvg4tp6vv"

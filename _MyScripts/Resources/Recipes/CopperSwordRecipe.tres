@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemRecipe" load_steps=5 format=3 uid="uid://bhjxps6qsa28k"]
+
+[ext_resource type="Resource" uid="uid://dnp77npub2rg0" path="res://_MyScripts/Resources/Items/CopperSword.tres" id="1_1rhxf"]
+[ext_resource type="Script" uid="uid://diu0hvg4tp6vv" path="res://_MyScripts/Resources/Items/ItemData.gd" id="1_css1g"]
+[ext_resource type="Script" uid="uid://qw71m5y5ys2t" path="res://_MyScripts/Resources/Recipes/ItemRecipes.gd" id="2_xigfn"]
+[ext_resource type="Resource" uid="uid://o5e2xlat6pf8" path="res://_MyScripts/Resources/Items/CopperBar.tres" id="3_agmyl"]
+
+[resource]
+script = ExtResource("2_xigfn")
+recipe_name = "Copper Sword Recipe"
+recipe_final_product_item = ExtResource("1_1rhxf")
+recipe_material_array = Array[ExtResource("1_css1g")]([ExtResource("3_agmyl")])
+amount_of_hammer_strikes = 5
+item_temperature_minimum = 300
+item_temperature_maximun = 1299
+metadata/_custom_type_script = "uid://qw71m5y5ys2t"

@@ -22,7 +22,6 @@ animations = [{
 radius = 16.0
 
 [node name="Carried_Item" type="Node2D"]
-z_index = 1
 script = ExtResource("1_fbyde")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -37,3 +36,9 @@ frame_progress = 0.890246
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_4qloe")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

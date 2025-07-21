@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemRecipe" load_steps=5 format=3 uid="uid://dtlj18r228uic"]
+
+[ext_resource type="Resource" uid="uid://cvpeg2ukej54b" path="res://_MyScripts/Resources/Items/DogatSilverCoin.tres" id="1_hb0kq"]
+[ext_resource type="Script" uid="uid://diu0hvg4tp6vv" path="res://_MyScripts/Resources/Items/ItemData.gd" id="1_tugq2"]
+[ext_resource type="Script" uid="uid://qw71m5y5ys2t" path="res://_MyScripts/Resources/Recipes/ItemRecipes.gd" id="2_hb0kq"]
+[ext_resource type="Resource" uid="uid://blc0b1ijttnmc" path="res://_MyScripts/Resources/Items/SilverBar.tres" id="3_0444b"]
+
+[resource]
+script = ExtResource("2_hb0kq")
+recipe_name = "Recipe For Noobs"
+recipe_final_product_item = ExtResource("1_hb0kq")
+recipe_material_array = Array[ExtResource("1_tugq2")]([ExtResource("3_0444b")])
+amount_of_hammer_strikes = 1
+item_temperature_minimum = 300
+item_temperature_maximun = 1599
+metadata/_custom_type_script = "uid://qw71m5y5ys2t"
