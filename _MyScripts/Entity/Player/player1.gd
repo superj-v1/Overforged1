@@ -1,6 +1,7 @@
 class_name PlayerEntity
 extends CharacterBody2D
 @onready var sprite_2d: Sprite2D = $Corpo
+@onready var sprite_animado: AnimatedSprite2D = $CorpoAnimado
 @onready var front: RayCast2D = $Front
 var baseFront : Vector2
 
@@ -51,11 +52,19 @@ func detec_input():
 	# Aqui checa-se se o jogador quer andar lento, mais preciso
 	if Input.is_action_just_pressed("ui_slow"):
 		slowTime = not slowTime
-	if direcao.x > 0:
-		sprite_2d.flip_h = true;
+		
+	if Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right"):
+		sprite_animado.play("side_walk");
+		if direcao.x < 0:
+			sprite_animado.flip_h = true;
+		if direcao.x > 0:
+			sprite_animado.flip_h = false;
+	elif Input.is_action_pressed("ui_up"):
+		sprite_animado.play("back");
+	elif Input.is_action_pressed("ui_down"):
+		sprite_animado.play("front");
 	else:
-		sprite_2d.flip_h = false;
-	
+		sprite_animado.stop();
 	if Input.is_action_just_pressed("item_drop"):
 		if inventory_component.get_inventory_contents().is_empty() != true:
 			inventory_component.remove_item(inventory_component.get_inventory_contents().keys().front(), 1, true)

@@ -16,7 +16,7 @@
 [ext_resource type="Resource" uid="uid://o5e2xlat6pf8" path="res://_MyScripts/Resources/Items/CopperBar.tres" id="11_ceje6"]
 [ext_resource type="PackedScene" uid="uid://b7oqnlkbvv0ya" path="res://_MyScenes/Entities/Benches/furnace.tscn" id="14_63wb4"]
 [ext_resource type="PackedScene" uid="uid://bqqa4wsfcita4" path="res://_MyScenes/UI/crafting_ui.tscn" id="14_nh4wr"]
-[ext_resource type="Script" uid="uid://gfpjxv27dg7b" path="res://game_manager.gd" id="15_wur0a"]
+[ext_resource type="Script" path="res://game_manager.gd" id="15_wur0a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f3wv5"]
 texture = ExtResource("1_ul6x0")
