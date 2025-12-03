@@ -1,0 +1,424 @@
+[gd_scene load_steps=14 format=3 uid="uid://wcwxd1ckmpp0"]
+
+[ext_resource type="Theme" uid="uid://djobd6trw45mn" path="res://scenes/ui/game_ui_theme.tres" id="1_7drqh"]
+[ext_resource type="Script" uid="uid://dijaheaggm66b" path="res://scenes/ui/day_and_night_panel_pause.gd" id="2_7drqh"]
+[ext_resource type="Texture2D" uid="uid://doxp8t15363wv" path="res://assets/ui/sprite_sheet_for_basic_pack.png" id="3_cgi51"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pyj3"]
+atlas = ExtResource("3_cgi51")
+region = Rect2(421, 34, 7, 12)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bfx8x"]
+load_path = "res://.godot/imported/sprite_sheet_for_basic_pack.png-f91055063c3e4917009a26d65ef7ef54.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urnhb"]
+atlas = SubResource("CompressedTexture2D_bfx8x")
+region = Rect2(421, 34, 3, 12)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_40tf0"]
+load_path = "res://.godot/imported/sprite_sheet_for_basic_pack.png-f91055063c3e4917009a26d65ef7ef54.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0dp3l"]
+atlas = SubResource("CompressedTexture2D_40tf0")
+region = Rect2(420, 50, 7, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rwei7"]
+atlas = SubResource("CompressedTexture2D_40tf0")
+region = Rect2(420, 50, 7, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gdgll"]
+atlas = SubResource("CompressedTexture2D_40tf0")
+region = Rect2(420, 50, 7, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uyk2r"]
+atlas = SubResource("CompressedTexture2D_40tf0")
+region = Rect2(420, 50, 7, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtnre"]
+atlas = SubResource("CompressedTexture2D_40tf0")
+region = Rect2(420, 50, 7, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4j6uu"]
+atlas = SubResource("CompressedTexture2D_40tf0")
+region = Rect2(420, 50, 7, 12)
+
+[node name="DayAndNightPanelPause" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_7drqh")
+script = ExtResource("2_7drqh")
+
+[node name="DayPanel" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = -80.0
+offset_bottom = 26.0
+theme_type_variation = &"DayAndNightCounterPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="DayPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="DayLabel" type="Label" parent="DayPanel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"DayAndNightLabel"
+text = "Day 0"
+
+[node name="TimePanel" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = -80.0
+offset_top = 28.0
+offset_bottom = 54.0
+theme_type_variation = &"DayAndNightCounterPanel"
+
+[node name="MarginContainer" type="MarginContainer" parent="TimePanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="TimeLabel" type="Label" parent="TimePanel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"DayAndNightLabel"
+text = "12:00"
+
+[node name="AdvanceTime" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -80.0
+offset_top = 56.0
+offset_bottom = 74.0
+
+[node name="NormalSpeedButton" type="Button" parent="AdvanceTime"]
+layout_mode = 0
+offset_right = 26.0
+offset_bottom = 18.0
+theme_type_variation = &"DayAndNightButton"
+
+[node name="TextureRect" type="TextureRect" parent="AdvanceTime/NormalSpeedButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -3.0
+offset_top = -6.0
+offset_right = 4.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_4pyj3")
+
+[node name="FastSpeedButton" type="Button" parent="AdvanceTime"]
+layout_mode = 0
+offset_left = 27.0
+offset_right = 53.0
+offset_bottom = 18.0
+theme_type_variation = &"DayAndNightButton"
+
+[node name="TextureRect" type="TextureRect" parent="AdvanceTime/FastSpeedButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_4pyj3")
+
+[node name="TextureRect2" type="TextureRect" parent="AdvanceTime/FastSpeedButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 1.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_4pyj3")
+
+[node name="LudicrousSpeedButton" type="Button" parent="AdvanceTime"]
+layout_mode = 0
+offset_left = 54.0
+offset_right = 80.0
+offset_bottom = 18.0
+theme_type_variation = &"DayAndNightButton"
+
+[node name="TextureRect" type="TextureRect" parent="AdvanceTime/LudicrousSpeedButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1.0
+offset_top = -6.0
+offset_right = 8.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_4pyj3")
+
+[node name="TextureRect2" type="TextureRect" parent="AdvanceTime/LudicrousSpeedButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -3.0
+offset_top = -6.0
+offset_right = 4.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_4pyj3")
+
+[node name="TextureRect3" type="TextureRect" parent="AdvanceTime/LudicrousSpeedButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -7.0
+offset_top = -6.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_4pyj3")
+
+[node name="PauseTime" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -80.0
+offset_top = 76.0
+offset_bottom = 94.0
+
+[node name="PauseButton" type="Button" parent="PauseTime"]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 18.0
+theme_type_variation = &"DayAndNightButton"
+
+[node name="Pause1" type="Control" parent="PauseTime/PauseButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 2.5
+offset_right = 2.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="PauseTime/PauseButton/Pause1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -6.0
+offset_right = 1.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_urnhb")
+
+[node name="TextureRect2" type="TextureRect" parent="PauseTime/PauseButton/Pause1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 2.0
+offset_top = -6.0
+offset_right = 5.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(-1, 1)
+texture = SubResource("AtlasTexture_urnhb")
+
+[node name="Pause2" type="Control" parent="PauseTime/PauseButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -3.5
+offset_right = -3.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="PauseTime/PauseButton/Pause2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -6.0
+offset_right = 1.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_urnhb")
+
+[node name="TextureRect2" type="TextureRect" parent="PauseTime/PauseButton/Pause2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 2.0
+offset_top = -6.0
+offset_right = 5.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(-1, 1)
+texture = SubResource("AtlasTexture_urnhb")
+
+[node name="RewindTime" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -80.0
+offset_top = 96.0
+offset_bottom = 114.0
+
+[node name="RewindSpeedButton" type="Button" parent="RewindTime"]
+layout_mode = 0
+offset_right = 26.0
+offset_bottom = 18.0
+theme_type_variation = &"DayAndNightButton"
+
+[node name="TextureRect" type="TextureRect" parent="RewindTime/RewindSpeedButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -3.0
+offset_top = -6.0
+offset_right = 4.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_0dp3l")
+
+[node name="ReturnSpeedButton" type="Button" parent="RewindTime"]
+layout_mode = 0
+offset_left = 27.0
+offset_right = 53.0
+offset_bottom = 18.0
+theme_type_variation = &"DayAndNightButton"
+
+[node name="TextureRect" type="TextureRect" parent="RewindTime/ReturnSpeedButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 1.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_rwei7")
+
+[node name="TextureRect2" type="TextureRect" parent="RewindTime/ReturnSpeedButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1.0
+offset_top = -6.0
+offset_right = 6.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_gdgll")
+
+[node name="BackToThePastSpeedButton" type="Button" parent="RewindTime"]
+layout_mode = 0
+offset_left = 54.0
+offset_right = 80.0
+offset_bottom = 18.0
+theme_type_variation = &"DayAndNightButton"
+
+[node name="TextureRect" type="TextureRect" parent="RewindTime/BackToThePastSpeedButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -7.0
+offset_top = -6.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_uyk2r")
+
+[node name="TextureRect2" type="TextureRect" parent="RewindTime/BackToThePastSpeedButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -3.0
+offset_top = -6.0
+offset_right = 4.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_rtnre")
+
+[node name="TextureRect3" type="TextureRect" parent="RewindTime/BackToThePastSpeedButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1.0
+offset_top = -6.0
+offset_right = 8.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("AtlasTexture_4j6uu")
+
+[connection signal="pressed" from="AdvanceTime/NormalSpeedButton" to="." method="_on_normal_speed_button_pressed"]
+[connection signal="pressed" from="AdvanceTime/FastSpeedButton" to="." method="_on_fast_speed_button_pressed"]
+[connection signal="pressed" from="AdvanceTime/LudicrousSpeedButton" to="." method="_on_ludicrous_speed_button_pressed"]
+[connection signal="pressed" from="PauseTime/PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="RewindTime/RewindSpeedButton" to="." method="_on_rewind_speed_button_pressed"]
+[connection signal="pressed" from="RewindTime/ReturnSpeedButton" to="." method="_on_return_speed_button_pressed"]
+[connection signal="pressed" from="RewindTime/BackToThePastSpeedButton" to="." method="_on_back_to_the_past_speed_button_pressed"]

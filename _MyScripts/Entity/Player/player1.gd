@@ -18,7 +18,7 @@ var slowTime = false
 @export var distanciaDoObjeto = 16
 
 
-var inventory_component : InventoryComponent = InventoryComponent.new()
+
 
 ## Used to determine how many inventory slots
 ## the character should possess
@@ -28,7 +28,6 @@ signal interact_with_object;
 
 func _ready() -> void:
 	velocidade = BaseVelocidade
-	inventory_component.max_inventory_slots = max_slots_for_inventory
 
 func detec_interact():
 	if Input.is_action_just_pressed("ui_accept"):
@@ -54,11 +53,16 @@ func detec_input():
 	if direcao.x > 0:
 		sprite_2d.flip_h = true;
 	else:
+<<<<<<< Updated upstream
 		sprite_2d.flip_h = false;
 	
 	if Input.is_action_just_pressed("item_drop"):
 		if inventory_component.get_inventory_contents().is_empty() != true:
 			inventory_component.remove_item(inventory_component.get_inventory_contents().keys().front(), 1, true)
+=======
+		sprite_animado.stop();
+#	if Input.is_action_just_pressed("item_drop"):
+>>>>>>> Stashed changes
 		
 	# Aqui checa-se se o jogador deve andar rápido, lento ou normal
 	if runTime and (not slowTime):

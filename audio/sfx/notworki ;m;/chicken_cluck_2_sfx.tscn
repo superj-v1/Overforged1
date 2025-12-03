@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dgk23igwnyl1e"]
+
+[ext_resource type="AudioStream" uid="uid://bqlpwjtu80vb5" path="res://assets/audio/sfx/chicken-cluck-2.ogg" id="1_wc8sf"]
+
+[node name="ChickenCluck2SFX" type="AudioStreamPlayer3D"]
+stream = ExtResource("1_wc8sf")
+bus = &"SFX"
+doppler_tracking = 1

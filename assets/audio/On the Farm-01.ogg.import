@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d08afunme3rwe"
+path="res://.godot/imported/On the Farm-01.ogg-14eafa3a127d23bbcea82a344f016e8e.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/On the Farm-01.ogg"
+dest_files=["res://.godot/imported/On the Farm-01.ogg-14eafa3a127d23bbcea82a344f016e8e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://myhi5q07w3cj"
+path="res://.godot/imported/guide_uwu_languge.dialogue-c58c3a4e9051a732692193188503b842.tres"
+
+[deps]
+
+source_file="res://dialogue/conversations/old/guide_uwu_languge.dialogue"
+dest_files=["res://.godot/imported/guide_uwu_languge.dialogue-c58c3a4e9051a732692193188503b842.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,117 @@
+[gd_scene load_steps=16 format=3 uid="uid://35fwscmwktcs"]
+
+[ext_resource type="Script" uid="uid://cj5uknygmplxm" path="res://scenes/characters/chicken/chicken.gd" id="1_jluq5"]
+[ext_resource type="Texture2D" uid="uid://dnsh0dldqqgth" path="res://assets/gaem/characters/free_chicken_sprites.png" id="1_q6vmp"]
+[ext_resource type="Script" uid="uid://cpp1d8emqnsgh" path="res://scripts/state_machine/node_state_machine.gd" id="2_bfiuf"]
+[ext_resource type="Script" uid="uid://cfy84jjpp74ev" path="res://scenes/characters/npc_states/idle_state.gd" id="3_t3ojk"]
+[ext_resource type="Script" uid="uid://cbqjanvc18wiq" path="res://scenes/characters/npc_states/walk_state.gd" id="4_t3ojk"]
+[ext_resource type="PackedScene" uid="uid://dqjveqfl2301w" path="res://audio/sfx/chicken_cluck_multiple_sfx.tscn" id="6_hv82h"]
+[ext_resource type="PackedScene" uid="uid://cg11e08dvmdgp" path="res://scenes/components/audio_play_time_component.tscn" id="7_wh5lc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rq1tb"]
+atlas = ExtResource("1_q6vmp")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfiuf"]
+atlas = ExtResource("1_q6vmp")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6vmp"]
+atlas = ExtResource("1_q6vmp")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3ojk"]
+atlas = ExtResource("1_q6vmp")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jluq5"]
+atlas = ExtResource("1_q6vmp")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfoor"]
+atlas = ExtResource("1_q6vmp")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t3ojk"]
+resource_local_to_scene = true
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rq1tb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfiuf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6vmp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t3ojk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jluq5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wfoor")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jluq5"]
+radius = 4.0
+
+[node name="Chicken" type="CharacterBody2D"]
+y_sort_enabled = true
+position = Vector2(0, -5)
+collision_layer = 64
+script = ExtResource("1_jluq5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_t3ojk")
+animation = &"walk"
+autoplay = "idle"
+frame = 1
+frame_progress = 0.574772
+offset = Vector2(1, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_jluq5")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_desired_distance = 10.0
+path_postprocessing = 1
+avoidance_enabled = true
+radius = 5.0
+
+[node name="State Machine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]
+script = ExtResource("2_bfiuf")
+initial_node_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="State Machine" node_paths=PackedStringArray("character", "animated_sprite_2d")]
+script = ExtResource("3_t3ojk")
+character = NodePath("../..")
+animated_sprite_2d = NodePath("../../AnimatedSprite2D")
+
+[node name="Walk" type="Node" parent="State Machine" node_paths=PackedStringArray("character", "animated_sprite_2d", "navigation_agent_2d")]
+script = ExtResource("4_t3ojk")
+character = NodePath("../..")
+animated_sprite_2d = NodePath("../../AnimatedSprite2D")
+navigation_agent_2d = NodePath("../../NavigationAgent2D")
+
+[node name="ChickenCluckMultipleSFX" parent="." instance=ExtResource("6_hv82h")]
+pitch_scale = 1.4
+bus = &"Master"
+
+[node name="AudioPlayTimeComponent" parent="." node_paths=PackedStringArray("audio_stream_stream_player_2d") instance=ExtResource("7_wh5lc")]
+wait_time = 5.0
+autostart = true
+audio_stream_stream_player_2d = NodePath("../ChickenCluckMultipleSFX")
+"pítch_scale_max" = 1.4

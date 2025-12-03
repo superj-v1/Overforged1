@@ -12,14 +12,14 @@ func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("open_inventory"):
 		if inventory_ui.visible == false:
 			inventory_ui.show()
-			inventory_ui.populate_inventory(player_1.inventory_component)
+#			inventory_ui.populate_inventory(player_1.inventory_component)
 			return
 		else:
 			inventory_ui.hide()
 			return
 	if crafting_bench.is_player_in_vicinity == true:
 		if Input.is_action_just_pressed("interact"):
-			crafting_ui_system.set_player_inventory(player_1.inventory_component)
+#			crafting_ui_system.set_player_inventory(player_1.inventory_component)
 			
 			if inventory_ui.visible == true:
 				inventory_ui.hide()

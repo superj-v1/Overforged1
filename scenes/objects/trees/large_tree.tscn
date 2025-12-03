@@ -1,0 +1,48 @@
+[gd_scene load_steps=10 format=3 uid="uid://p4jqiscjkpbm"]
+
+[ext_resource type="Texture2D" uid="uid://c2ft0yvp4bppg" path="res://assets/gaem/objects/basic_grass_biom_things.png" id="1_nf5nk"]
+[ext_resource type="Shader" uid="uid://c5b5w6n3oskb4" path="res://scenes/objects/shake.gdshader" id="1_qgfpt"]
+[ext_resource type="PackedScene" uid="uid://dvlcvpal1ljyp" path="res://scenes/components/hurt_component.tscn" id="3_p053b"]
+[ext_resource type="Script" uid="uid://v8ybjsf5n174" path="res://scenes/objects/trees/large_tree.gd" id="3_qgfpt"]
+[ext_resource type="PackedScene" uid="uid://k0ebe873hnkb" path="res://scenes/components/damage_component.tscn" id="4_ovei0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p053b"]
+resource_local_to_scene = true
+shader = ExtResource("1_qgfpt")
+shader_parameter/shake_intensity = 0.0
+shader_parameter/shake_speed = 20.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hpnl6"]
+atlas = ExtResource("1_nf5nk")
+region = Rect2(16, 0, 32, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_k37gm"]
+radius = 5.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ceajm"]
+size = Vector2(16, 24)
+
+[node name="LargeTree" type="Sprite2D"]
+material = SubResource("ShaderMaterial_p053b")
+position = Vector2(0, -4)
+texture = SubResource("AtlasTexture_hpnl6")
+offset = Vector2(0, -8)
+script = ExtResource("3_qgfpt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_k37gm")
+debug_color = Color(0.912713, 0.675871, 0.128917, 0.42)
+
+[node name="HurtComponent" parent="." instance=ExtResource("3_p053b")]
+tool = 1
+
+[node name="HurtComponentCollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
+position = Vector2(0, -7)
+shape = SubResource("RectangleShape2D_ceajm")
+debug_color = Color(0.89501, 0.192933, 0.633246, 0.42)
+
+[node name="DamageComponent" parent="." instance=ExtResource("4_ovei0")]
+max_damage = 6

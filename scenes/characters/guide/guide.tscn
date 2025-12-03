@@ -1,0 +1,66 @@
+[gd_scene load_steps=11 format=3 uid="uid://55aua7pei7u8"]
+
+[ext_resource type="Script" uid="uid://cbxun403dbfpv" path="res://scenes/characters/guide/guide.gd" id="1_jc3v6"]
+[ext_resource type="Shader" uid="uid://dgy6h51elynse" path="res://scenes/characters/guide/replace_color.gdshader" id="1_pqo5d"]
+[ext_resource type="Texture2D" uid="uid://diee68q6jvyp7" path="res://assets/gaem/characters/basic_charakter_spritesheet.png" id="2_kgf2b"]
+[ext_resource type="PackedScene" uid="uid://3rq5dl6vqyd0" path="res://scenes/components/interactable_component.tscn" id="3_kgf2b"]
+[ext_resource type="PackedScene" uid="uid://dqgi55g87he1n" path="res://scenes/components/interactable_label_component.tscn" id="4_40v32"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_40v32"]
+shader = ExtResource("1_pqo5d")
+shader_parameter/original0 = Color(0.360784, 0.305882, 0.572549, 1)
+shader_parameter/original1 = Color(0.462745, 0.427451, 0.666667, 1)
+shader_parameter/original2 = Color(0.866667, 0.835294, 0.870588, 1)
+shader_parameter/original3 = Color(0.952941, 0.94902, 0.752941, 1)
+shader_parameter/replace0 = Color(0.756863, 0.027451, 0.419608, 1)
+shader_parameter/replace1 = Color(0.831373, 0.415686, 0.227451, 1)
+shader_parameter/replace2 = Color(0.70878, 0.99719, 0.902652, 1)
+shader_parameter/replace3 = Color(0.952941, 0.94902, 0.752941, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jc3v6"]
+atlas = ExtResource("2_kgf2b")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nblse"]
+atlas = ExtResource("2_kgf2b")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t7x1h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jc3v6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nblse")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_40v32"]
+radius = 19.0
+
+[node name="Guide" type="Node2D"]
+script = ExtResource("1_jc3v6")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_40v32")
+position = Vector2(0, -7)
+sprite_frames = SubResource("SpriteFrames_t7x1h")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.812859
+
+[node name="InteractableComponent" parent="." instance=ExtResource("3_kgf2b")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_40v32")
+
+[node name="InteractableLabelComponent" parent="." instance=ExtResource("4_40v32")]
+offset_left = -27.0
+offset_top = -34.0
+offset_right = -9.0
+offset_bottom = -16.0

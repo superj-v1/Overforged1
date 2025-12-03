@@ -1,0 +1,19 @@
+~ start_cow_pastue_box_funny
+Pastue Box: [[Hi|Hallo|Huwdy]], you're animals remeber there're hunger.
+Pastue Box: Give SUStenance to the critters of galactea?
+- Yeah!
+	Malon the Melon: Give unto them their feast, for there're milk shall sustain me.
+- No.
+	Malon the Melon: No, the milk makers shall nut feast, for there're milk I possess en masse.
+
+=> END
+
+~ start_chicken_pastue_box_funny
+Pastue Box: [[Hi|Hallo|Huwdy]], you're animals remeber there're hunger.
+Pastue Box: Give SUStenance to the critters of egglore?
+- Yeah!
+	Malon the Melon: Give unto them their feast, for there're Egg shall sustain me.
+- No.
+	Malon the Melon: No, the egg makers shall nut feast, for there're Egg I possess en masse.
+
+=> END

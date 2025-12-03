@@ -1,0 +1,42 @@
+[gd_scene load_steps=10 format=3 uid="uid://cv4uvmflxyupq"]
+
+[ext_resource type="Script" uid="uid://djm3k6lm1e1i4" path="res://scenes/objects/plants/corn.gd" id="1_t463g"]
+[ext_resource type="Texture2D" uid="uid://dxobt7bg264bd" path="res://assets/gaem/objects/basic_plants.png" id="1_v4blr"]
+[ext_resource type="PackedScene" uid="uid://dvlcvpal1ljyp" path="res://scenes/components/hurt_component.tscn" id="2_2pm3v"]
+[ext_resource type="PackedScene" uid="uid://yo4qo2h3loda" path="res://scenes/objects/plants/watering_particles.tscn" id="2_qk3lc"]
+[ext_resource type="PackedScene" uid="uid://bx4i1lfqavain" path="res://scenes/objects/plants/flowering_particles.tscn" id="3_qk3lc"]
+[ext_resource type="PackedScene" uid="uid://cfajc5ne2pe1" path="res://scenes/objects/plants/growth_cycle_component.tscn" id="5_bpeyb"]
+[ext_resource type="PackedScene" uid="uid://dm23h6imre5jh" path="res://scenes/components/save_data_component.tscn" id="7_bpeyb"]
+[ext_resource type="Resource" uid="uid://de0xvavlw8w1q" path="res://resources/scene_data_resource.tres" id="8_s1vcl"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_413a8"]
+custom_solver_bias = 1.0
+points = PackedVector2Array(-7, -4, -7, 4, 6, 4, 6, -4)
+
+[node name="Corn" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_t463g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -4)
+texture = ExtResource("1_v4blr")
+hframes = 6
+vframes = 2
+frame = 1
+
+[node name="WateringParticles" parent="." instance=ExtResource("2_qk3lc")]
+
+[node name="FloweringParticles" parent="." instance=ExtResource("3_qk3lc")]
+
+[node name="GrowthCycleComponent" parent="." instance=ExtResource("5_bpeyb")]
+
+[node name="HurtComponent" parent="." instance=ExtResource("2_2pm3v")]
+position = Vector2(0, -4)
+tool = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
+position = Vector2(0, 3)
+shape = SubResource("ConvexPolygonShape2D_413a8")
+
+[node name="SaveDataComponent" parent="." instance=ExtResource("7_bpeyb")]
+save_data_resource = ExtResource("8_s1vcl")

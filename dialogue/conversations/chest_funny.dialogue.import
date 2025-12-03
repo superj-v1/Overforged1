@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cmcck5s8mf77a"
+path="res://.godot/imported/chest_funny.dialogue-77cbfb9530ca30bb52e7d9038c1b49c1.tres"
+
+[deps]
+
+source_file="res://dialogue/conversations/chest_funny.dialogue"
+dest_files=["res://.godot/imported/chest_funny.dialogue-77cbfb9530ca30bb52e7d9038c1b49c1.tres"]
+
+[params]
+
+defaults=true

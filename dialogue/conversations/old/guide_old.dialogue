@@ -1,0 +1,10 @@
+~ start
+
+Marlow: [[Hi|Hello|Howdy]], nice to meet you.
+Marlow: Welcome to your new farm.
+Marlow: As you can see the cows and chickens are hungry.
+Marlow: You need to grow some crops to feed them 'w'.
+Marlow: Here some seeds to grow some crops :3.
+
+do GameDialogueManager.action_give_crops_seeds()
+=> END

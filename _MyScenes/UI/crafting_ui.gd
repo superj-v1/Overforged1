@@ -29,7 +29,7 @@ extends PanelContainer
 var recipe_material_dictionary : Dictionary = {}
 
 # The inventory of the player
-var player_inventory : InventoryComponent = null
+#var player_inventory : InventoryComponent = null
 
 # The recipe that the player selected, duh!
 var selected_recipe : ItemRecipe = null
@@ -41,8 +41,6 @@ var player_inventory_contents : Dictionary = {}
 func _ready() -> void:
 	build_recipe_tree()
 
-func set_player_inventory(new_inventory : InventoryComponent) -> void:
-	player_inventory = new_inventory
 	
 	if selected_recipe == null:
 		selected_recipe = recipes_array[0]
@@ -112,7 +110,7 @@ func build_recipe_material_window(selected_recipe : ItemRecipe) -> void:
 	
 
 func check_recipe_craftable() ->void:
-	player_inventory_contents = player_inventory.get_inventory_contents()
+#	player_inventory_contents = player_inventory.get_inventory_contents()
 	
 	if player_inventory_contents.has_all(recipe_material_dictionary.keys()):
 		print("Has eggs")
@@ -140,16 +138,3 @@ func clean_material_window() -> void:
 # clicks the [SuspicioslyXShapedButton]
 func _on_exit_button_button_down() -> void:
 	crafting_ui_root.hide()
-
-
-func _on_craft_button_button_down() -> void:
-	player_inventory_contents = player_inventory.get_inventory_contents()
-	
-	for recipe_material in recipe_material_dictionary:
-		# Create Remove Function
-		player_inventory.remove_item(recipe_material, recipe_material_dictionary[recipe_material], false)
-		
-	
-	player_inventory.add_item(selected_recipe.recipe_final_product_item, 1)
-	
-	check_recipe_craftable()

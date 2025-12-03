@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://uv1vv3bv53it"
+path="res://.godot/imported/10. Solargress - Forever Trapped.ogg-871480d33314b7f6fcbc5f28a27a0f67.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/music/10. Solargress - Forever Trapped.ogg"
+dest_files=["res://.godot/imported/10. Solargress - Forever Trapped.ogg-871480d33314b7f6fcbc5f28a27a0f67.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
